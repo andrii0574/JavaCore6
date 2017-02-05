@@ -1,4 +1,4 @@
-package HomeWork1;
+package Modul_1.dz_1;
 
 /**
  * Created by Z570 on 26.01.2017.
