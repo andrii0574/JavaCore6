@@ -3,61 +3,61 @@ package Modul_2.dz_2_1;
 /**
  * Created by Z570 on 05.02.2017.
  */
-public class SecondModuleFirstDZArray {
+public class Calculating_Arrays {
 
     public static void main(String[] args) {
         int [] intArray = {1, 2, 3, 10, -5, 8, -3, -2, 7, 6};
         double [] doubleArray = {1.02, 2.53, 3.28, 10.53, -5.84, -6.82, 7.23, 8.73, -7.06, 7.35};
 
-        SecondModuleFirstDZArray SecondModuleFirstDZArray = new SecondModuleFirstDZArray();
+        Calculating_Arrays calculating_Arrays = new Calculating_Arrays();
 
-        SecondModuleFirstDZArray.sum(intArray);
+        calculating_Arrays.printSumOfArray(intArray);
 
-        SecondModuleFirstDZArray.sum(doubleArray);
+        calculating_Arrays.printSumOfArray(doubleArray);
 
-        SecondModuleFirstDZArray.min(intArray);
+        calculating_Arrays.minElementOfArray(intArray);
 
-        SecondModuleFirstDZArray.min(doubleArray);
+        calculating_Arrays.minElementOfArray(doubleArray);
 
-        SecondModuleFirstDZArray.max(intArray);
+        calculating_Arrays.maxElementOfArray(intArray);
 
-        SecondModuleFirstDZArray.max(doubleArray);
+        calculating_Arrays.maxElementOfArray(doubleArray);
 
-        SecondModuleFirstDZArray.maxPositive(intArray);
+        calculating_Arrays.maxPositive(intArray);
 
-        SecondModuleFirstDZArray.maxPositive(doubleArray);
+        calculating_Arrays.maxPositive(doubleArray);
 
-        SecondModuleFirstDZArray.multiplication(intArray);
+        calculating_Arrays.multiplication(intArray);
 
-        SecondModuleFirstDZArray.multiplication(doubleArray);
+        calculating_Arrays.multiplication(doubleArray);
 
-        SecondModuleFirstDZArray.modulus(intArray);
+        calculating_Arrays.modulusOfFirstAndLast(intArray);
 
-        SecondModuleFirstDZArray.modulus(doubleArray);
+        calculating_Arrays.modulusOfFirstAndLast(doubleArray);
 
-        SecondModuleFirstDZArray.secondLargest(intArray);
+        calculating_Arrays.secondLargest(intArray);
 
-        SecondModuleFirstDZArray.secondLargest(doubleArray);
+        calculating_Arrays.secondLargest(doubleArray);
     }
 // SUM ----------------------------------------------------
-    private void sum(int[] intArray) {
-        int sum = 0;
+    private void printSumOfArray(int[] intArray) {
+        int resultSumOfArray = 0;
         for( int i : intArray) {
-            sum += i;
+            resultSumOfArray += i;
         }
-        System.out.println("Sum (int): " + sum);
+        System.out.println("Sum (int): " + resultSumOfArray);
     }
 
-    public void sum(double [] doubleArray) {
-        double sum = 0;
+    public void printSumOfArray(double [] doubleArray) {
+        double resultSumOfArray = 0;
         for( double i : doubleArray) {
-            sum += i;
+            resultSumOfArray += i;
         }
-        System.out.println("Sum (double): " + sum);
+        System.out.println("Sum (double): " + resultSumOfArray);
     }
 
 // MIN -----------------------------------------------------
-    private void min(int[] intArray) {
+    private void minElementOfArray(int[] intArray) {
         int minval = intArray[0];
         for(int i = 0; i != intArray.length; i ++){
             if(intArray[i]<minval)
@@ -66,7 +66,7 @@ public class SecondModuleFirstDZArray {
         System.out.println("Min (int): " + minval);
     }
 
-    private void min(double[] doubleArray) {
+    private void minElementOfArray(double[] doubleArray) {
         double minval = doubleArray[0];
         for(int i = 0; i != doubleArray.length; i ++){
             if(doubleArray[i]<minval)
@@ -75,7 +75,7 @@ public class SecondModuleFirstDZArray {
         System.out.println("Min (double): " + minval);
     }
 // MAX -----------------------------------------------------
-    private void max(int[] intArray) {
+    private void maxElementOfArray(int[] intArray) {
         int maxval = intArray[0];
         for(int i = 0; i != intArray.length; i ++){
             if(intArray[i]>maxval)
@@ -84,7 +84,7 @@ public class SecondModuleFirstDZArray {
         System.out.println("Max (int): " + maxval);
     }
 
-    private void max(double[] doubleArray) {
+    private void maxElementOfArray(double[] doubleArray) {
         double maxval = doubleArray[0];
         for(int i = 0; i != doubleArray.length; i ++){
             if(doubleArray[i]>maxval)
@@ -127,14 +127,14 @@ public class SecondModuleFirstDZArray {
         System.out.println("multiplication (double): " + mult);
     }
 // modulus of first and last element -------------------------
-    private void modulus(int[] intArray) {
+    private void modulusOfFirstAndLast(int[] intArray) {
         int firstelm = intArray[0];
         int lastelm = intArray[intArray.length - 1];
         System.out.println("modulus of first element (int): " + Math.abs(firstelm));
         System.out.println("modulus of last element (int): " + Math.abs(lastelm));
     }
 
-    private void modulus(double[] doubleArray) {
+    private void modulusOfFirstAndLast(double[] doubleArray) {
         double firstelm = doubleArray[0];
         double lastelm = doubleArray[doubleArray.length - 1];
         System.out.println("modulus of first element (double): " + Math.abs(firstelm));

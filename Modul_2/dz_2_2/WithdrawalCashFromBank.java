@@ -3,12 +3,12 @@ package Modul_2.dz_2_2;
 /**
  * Created by Z570 on 07.02.2017.
  */
-public class SecondDZBankWithdraw {
+public class WithdrawalCashFromBank {
     public static void main(String[] args) {
         double withdrawal_1 = 10.00;
         double withdrawal_2 = 99.00;
 
-        SecondDZBankWithdraw SecondDZBankWithdraw = new SecondDZBankWithdraw();
+        WithdrawalCashFromBank SecondDZBankWithdraw = new WithdrawalCashFromBank();
 
         SecondDZBankWithdraw.withdrawalCash(withdrawal_1);
         SecondDZBankWithdraw.withdrawalCash(withdrawal_2);
@@ -29,7 +29,7 @@ public class SecondDZBankWithdraw {
         }else{
             System.out.println("NO");
         }
-        
+
     }
 
 }
