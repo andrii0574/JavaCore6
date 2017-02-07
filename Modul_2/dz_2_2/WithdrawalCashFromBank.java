@@ -8,10 +8,10 @@ public class WithdrawalCashFromBank {
         double withdrawal_1 = 10.00;
         double withdrawal_2 = 99.00;
 
-        WithdrawalCashFromBank SecondDZBankWithdraw = new WithdrawalCashFromBank();
+        WithdrawalCashFromBank bankWithdraw = new WithdrawalCashFromBank();
 
-        SecondDZBankWithdraw.withdrawalCash(withdrawal_1);
-        SecondDZBankWithdraw.withdrawalCash(withdrawal_2);
+        bankWithdraw.withdrawalCash(withdrawal_1);
+        bankWithdraw.withdrawalCash(withdrawal_2);
 
 
     }
