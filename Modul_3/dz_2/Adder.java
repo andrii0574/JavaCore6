@@ -7,20 +7,14 @@ public class Adder extends Arithmetic {
 
     public static void main(String[] args) {
         Adder calculateSumAndComparison = new Adder();
-        calculateSumAndComparison.add();
-        calculateSumAndComparison.check();
+        System.out.println(calculateSumAndComparison.add(5,5));
+        System.out.println(calculateSumAndComparison.check(1,2));
     }
 
-    private void check(){
-        int a = super.getA();
-        int b = super.getB();
-        boolean checker;
-        if( a>= b) {
-            checker = true;
-        }else{
-            checker = false;
-        }
+    public boolean check(int a, int b){
 
-        System.out.println(checker);
+        if( a>= b) {return true;}
+
+        return false;
     }
 }
