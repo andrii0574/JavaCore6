@@ -94,7 +94,7 @@ public class User {
 
     void paySalary(){
         this.balance = this.salary + this.balance;
-        System.out.println("New " + this.name + " balance after pay of salary: " + this.balance);
+        System.out.println("New " + this.name + " balance after pay of salary: " + this.balance + " " + this.currency);
     }
 
     void withdraw(int summ){
@@ -107,7 +107,7 @@ public class User {
             commission = this.commis10;
         }
 
-        System.out.println("New balance after payment with commission " + commission + "%: " + this.balance);
+        System.out.println("New balance after payment with commission " + commission + "%: " + this.balance+ " " + this.currency);
     }
 
     void companyNameLenght(){
