@@ -10,8 +10,8 @@ public class User {
     private String companyName;
     private int salary;
     private String currency;
-    private static final int commis5 = 5;
-    private static final int commis10 = 10;
+    private static final int COMMISSION_FIVE_PERCENT = 5;
+    private static final int COMMISSION_TEN_PERCENT = 10;
 
     public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
         this.name = name;
@@ -71,11 +71,11 @@ public class User {
     }
 
     public static int getComis5() {
-        return commis5;
+        return COMMISSION_FIVE_PERCENT;
     }
 
     public static int getComis10() {
-        return commis10;
+        return COMMISSION_TEN_PERCENT;
     }
 
     public static void main(String[] args) {
@@ -100,11 +100,11 @@ public class User {
     void withdraw(int summ){
         int commission = 0;
         if(this.balance < 1000){
-            this.balance = this.balance - (summ + summ*this.commis5/100);
-            commission = this.commis5;
+            this.balance = this.balance - (summ + summ*this.COMMISSION_FIVE_PERCENT /100);
+            commission = this.COMMISSION_FIVE_PERCENT;
         }else{
-            this.balance = this.balance - (summ + summ*this.commis10/100);
-            commission = this.commis10;
+            this.balance = this.balance - (summ + summ*this.COMMISSION_TEN_PERCENT /100);
+            commission = this.COMMISSION_TEN_PERCENT;
         }
 
         System.out.println("New balance after payment with commission " + commission + "%: " + this.balance+ " " + this.currency);
