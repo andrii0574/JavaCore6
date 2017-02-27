@@ -92,12 +92,12 @@ public class User {
         User2.monthIncreaser(3);
     }
 
-    void paySalary(){
+    public void paySalary(){
         this.balance = this.salary + this.balance;
         System.out.println("New " + this.name + " balance after pay of salary: " + this.balance + " " + this.currency);
     }
 
-    void withdraw(int summ){
+    public void withdraw(int summ){
         int commission = 0;
         if(this.balance < 1000){
             this.balance = this.balance - (summ + summ*this.COMMISSION_FIVE_PERCENT /100);
@@ -110,11 +110,11 @@ public class User {
         System.out.println("New balance after payment with commission " + commission + "%: " + this.balance+ " " + this.currency);
     }
 
-    void companyNameLenght(){
+    public void companyNameLenght(){
         System.out.println("Length of company name: " + this.companyName.length());
     }
 
-    void monthIncreaser(int addMonth){
+    public void monthIncreaser(int addMonth){
         this.monthsOfEmployment += addMonth;
         System.out.println("New Month Of Employment: " + this.monthsOfEmployment + "\n");
     }
