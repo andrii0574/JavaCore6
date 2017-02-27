@@ -8,7 +8,6 @@ import Module_4.dz_4.User;
 public class BankSystemImpl implements BankSystem {
 
 
-    @Override
     public void withdrawOfUser(User user, int amount) {
         if((user.getBank().getLimitOfWithdrawal() < amount)){
             System.out.println("Error! Limit of withdraw exceeded \n");
@@ -22,7 +21,6 @@ public class BankSystemImpl implements BankSystem {
 
     }
 
-    @Override
     public void fundUser(User user, int amount) {
         if(user.getBank().getLimitOfFunding() < amount){
             System.out.println("Error! Limit of fund exceeded \n");
@@ -33,7 +31,6 @@ public class BankSystemImpl implements BankSystem {
         }
     }
 
-    @Override
     public void transferMoney(User fromUser, User toUser, int amount) {
         if(fromUser.getBalance() < (amount + fromUser.getBank().getCommission(amount))){
             System.out.println("Error! Missing sum on the balance \n");
@@ -44,7 +41,6 @@ public class BankSystemImpl implements BankSystem {
         System.out.println("Transfer " + amount + " with commission " + fromUser.getBank().getCommission(amount) + " " + fromUser.getBank().getCurrency()+ " from User " + fromUser.getName() + " to User " + toUser.getName() + "\n");
     }
 
-    @Override
     public void paySalary(User user) {
         double sumOfSalary = user.getMonthsOfEmployment() * user.getSalary() + (user.getSalary() / 100 * user.getBank().getMonthlyRate());
         user.setBalance(user.getBalance() + sumOfSalary);

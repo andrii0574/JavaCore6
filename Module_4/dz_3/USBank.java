@@ -8,13 +8,24 @@ import Module_4.dz_2.Currency;
  */
 public class USBank extends Bank{
 
+    private static final int LIMIT_OF_WITHDRAWAL_USD = 1000;
+    private static final int LIMIT_OF_WITHDRAWAL_EUR = 1200;
+    private static final int LIMIT_OF_FUNDING_USD = Integer.MAX_VALUE;
+    private static final int LIMIT_OF_FUNDING_EUR = 10000;
+    private static final int MONTHLY_RATE_USD = 1;
+    private static final int MONTHLY_RATE_EUR = 2;
+    private static final int USB_COMMISSION_LESS_1000_USD = 5;
+    private static final int USB_COMMISSION_MORE_1000_USD = 7;
+    private static final int USB_COMMISSION_LESS_1000_EUR = 6;
+    private static final int USB_COMMISSION_MORE_1000_EUR = 8;
+
     public int getLimitOfWithdrawal(){
         int limitOfWithdrawal = 0;
         if(getCurrency() == Currency.USD){
-            limitOfWithdrawal = 1000;
+            limitOfWithdrawal = LIMIT_OF_WITHDRAWAL_USD;
         }
         if(getCurrency() == Currency.EUR){
-            limitOfWithdrawal = 1200;
+            limitOfWithdrawal = LIMIT_OF_WITHDRAWAL_EUR;
         }
         return limitOfWithdrawal;
 
@@ -23,10 +34,10 @@ public class USBank extends Bank{
     public int getLimitOfFunding(){
         int limitOfFunding = 0;
         if(getCurrency() == Currency.USD){
-            limitOfFunding = Integer.MAX_VALUE;
+            limitOfFunding = LIMIT_OF_FUNDING_USD;
         }
         if(getCurrency() == Currency.EUR){
-            limitOfFunding = 10000;
+            limitOfFunding = LIMIT_OF_FUNDING_EUR;
         }
         return limitOfFunding;
     }
@@ -34,10 +45,10 @@ public class USBank extends Bank{
     public int getMonthlyRate(){
         int monthlyRate = 0;
         if(getCurrency() == Currency.USD){
-            monthlyRate = 1;
+            monthlyRate = MONTHLY_RATE_USD;
         }
         if(getCurrency() == Currency.EUR){
-            monthlyRate = 2;
+            monthlyRate = MONTHLY_RATE_EUR;
         }
         return monthlyRate;
     }
@@ -45,16 +56,16 @@ public class USBank extends Bank{
     public int getCommission(int summ){
         int commission = 0;
         if((getCurrency() == Currency.USD) && summ < 1000){
-            commission = summ / 100 * 5;
+            commission = summ / 100 * USB_COMMISSION_LESS_1000_USD;
         }
         if((getCurrency() == Currency.USD) && summ >= 1000){
-            commission = summ / 100 *  7;
+            commission = summ / 100 *  USB_COMMISSION_MORE_1000_USD;
         }
         if((getCurrency() == Currency.EUR) && summ < 1000){
-            commission = summ / 100 *  6;
+            commission = summ / 100 *  USB_COMMISSION_LESS_1000_EUR;
         }
         if((getCurrency() == Currency.EUR) && summ >= 1000){
-            commission = summ / 100 *  8;
+            commission = summ / 100 *  USB_COMMISSION_MORE_1000_EUR;
         }
         return commission;
     }
