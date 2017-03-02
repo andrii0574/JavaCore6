@@ -70,59 +70,17 @@ public class Main {
 
 
 
-        User user1 = new User();
-        user1.setId(1);
-        user1.setName("Alex");
-        user1.setBalance(3000);
-        user1.setMonthsOfEmployment(2);
-        user1.setCompanyName("SoftWareCompany1");
-        user1.setSalary(2000);
-        user1.setBank(bankOfUS1);
+        User user1 = new User(1, "Alex", 3000, 2, "SoftWareCompany1", 2000, bankOfUS1);
 
-        User user2 = new User();
-        user2.setId(2);
-        user2.setName("Max");
-        user2.setBalance(5000);
-        user2.setMonthsOfEmployment(3);
-        user2.setCompanyName("SoftWareCompany2");
-        user2.setSalary(2300);
-        user2.setBank(bankOfUS2);
+        User user2 = new User(2, "Max", 5000, 3, "SoftWareCompany2", 2300, bankOfUS2);
 
-        User user3 = new User();
-        user3.setId(3);
-        user3.setName("Edvard");
-        user3.setBalance(300);
-        user3.setMonthsOfEmployment(3);
-        user3.setCompanyName("SoftWareCompany3");
-        user3.setSalary(2100);
-        user3.setBank(bankOfEU1);
+        User user3 = new User(3, "Edvard", 300, 3, "SoftWareCompany3", 2100, bankOfEU1);
 
-        User user4 = new User();
-        user4.setId(4);
-        user4.setName("Maven");
-        user4.setBalance(1000);
-        user4.setMonthsOfEmployment(5);
-        user4.setCompanyName("SoftWareCompany4");
-        user4.setSalary(1700);
-        user4.setBank(bankOfEU2);
+        User user4 = new User(4, "Maven", 1000, 5, "SoftWareCompany4", 1700, bankOfEU2);
 
-        User user5 = new User();
-        user5.setId(5);
-        user5.setName("Kelvin");
-        user5.setBalance(5000);
-        user5.setMonthsOfEmployment(3);
-        user5.setCompanyName("SoftWareCompany5");
-        user5.setSalary(2300);
-        user5.setBank(bankOfChina1);
+        User user5 = new User(5, "Kelvin", 5000, 3, "SoftWareCompany5", 2300, bankOfChina1);
 
-        User user6 = new User();
-        user6.setId(6);
-        user6.setName("Cin");
-        user6.setBalance(100);
-        user6.setMonthsOfEmployment(8);
-        user6.setCompanyName("SoftWareCompany6");
-        user6.setSalary(1600);
-        user6.setBank(bankOfChina2);
+        User user6 = new User(6, "Cin", 100, 8, "SoftWareCompany6", 1600, bankOfChina2);
 
         BankSystemImpl bankSystemImpl = new BankSystemImpl();
 
