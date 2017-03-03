@@ -25,8 +25,7 @@ public class DAOImpl implements DAO {
     }
 
     public Room findById(long id) {
-        Room room = new Room(14, 400, 3, new Date(), "Hotel Name 4", "City Name 4");
         System.out.println("Find by id room: " + id);
-        return room;
+        return null;
     }
 }
