@@ -2,7 +2,11 @@ package Module_5.dz_4;
 
 import Module_5.dz_1_2.Room;
 import Module_5.dz_3.API;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+
 /**
  * Created by Z570 on 02.03.2017.
  */
@@ -20,8 +24,24 @@ public class BookingComAPI implements API {
     }
 
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        return new Room[0];
+        ArrayList<Room> findedRoomsL = new ArrayList<>();
+        for (int i = 0; i < bookingRooms.length; i++) {
+
+            if(bookingRooms[i].getPrice() == price && bookingRooms[i].getPersons() == persons && bookingRooms[i].getCityName().equals(city) && bookingRooms[i].getHotelName().equals(hotel)){
+                findedRoomsL.add(bookingRooms[i]);
+                //System.out.println(findedRooms.get(i));
+            }
+        }
+        Room[] findedRooms = new Room[findedRoomsL.size()];
+        for (int i = 0; i < findedRoomsL.size(); i++) {
+            findedRooms[i] = findedRoomsL.get(i);
+            //System.out.println(findedRooms[i]);
+        }
+
+            return findedRooms;
     }
+
+
 
 
 }
