@@ -19,7 +19,7 @@ public class TripAdvisorAPI implements API {
         tripAdvisorRooms[1] = new Room(7, 300, 2, new Date(), "Hotel Name 2", "City Name 2");
         tripAdvisorRooms[2] = new Room(8, 200, 1, new Date(), "Hotel Name 6", "City Name 6");
         tripAdvisorRooms[3] = new Room(9, 400, 3, new Date(), "Hotel Name 4", "City Name 4");
-        tripAdvisorRooms[4] = new Room(10, 200, 1, new Date(), "Hotel Name 3", "City Name 3");
+        tripAdvisorRooms[4] = new Room(10, 230, 1, new Date(), "Hotel Name 3", "City Name 3");
     }
 
     public Room[] findRooms(int price, int persons, String city, String hotel) {
@@ -36,5 +36,9 @@ public class TripAdvisorAPI implements API {
         }
 
         return findedRooms;
+    }
+
+    public Room[] getAllRooms(){
+        return  tripAdvisorRooms;
     }
 }

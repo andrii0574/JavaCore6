@@ -18,7 +18,7 @@ public class GoogleAPI implements API {
         googleRooms[0] = new Room(11, 200, 1, new Date(), "Hotel Name 1", "City Name 1");
         googleRooms[1] = new Room(12, 300, 2, new Date(), "Hotel Name 4", "City Name 4");
         googleRooms[2] = new Room(13, 200, 1, new Date(), "Hotel Name 3", "City Name 3");
-        googleRooms[3] = new Room(14, 400, 3, new Date(), "Hotel Name 4", "City Name 4");
+        googleRooms[3] = new Room(14, 200, 1, new Date(), "Hotel Name 1", "City Name 1");
         googleRooms[4] = new Room(15, 600, 4, new Date(), "Hotel Name 3", "City Name 3");
     }
 
@@ -36,5 +36,9 @@ public class GoogleAPI implements API {
         }
 
         return findedRooms;
+    }
+
+    public Room[] getAllRooms(){
+        return  googleRooms;
     }
 }
