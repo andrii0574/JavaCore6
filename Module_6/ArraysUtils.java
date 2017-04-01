@@ -6,6 +6,9 @@ import java.util.ArrayList;
  */
 public final class ArraysUtils {
 
+    private ArraysUtils() {
+    }
+
     // SUM ----------------------------------------------------
     public static int sumOfArray(int[] intArray) {
         int resultSumOfArray = 0;

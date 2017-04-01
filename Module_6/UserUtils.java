@@ -7,9 +7,8 @@ import java.util.ArrayList;
  */
 public final class UserUtils {
 
-    /*
- – finds and removes empty elements of the array (as a result returns a new array with smaller size)
-     */
+    private UserUtils() {
+    }
 
     // finds and returns unique users (users are equal when all their field are equal
     public static User[] uniqueUsers(User[] users){

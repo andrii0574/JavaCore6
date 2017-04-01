@@ -7,6 +7,7 @@ import java.util.Arrays;
  */
 public class UsersMain {
 
+
     public static User user1 = new User(1, "Alex", "Bush", 1000, 1200);
     public static User user2 = new User(1, "Alex", "Bush", 1000, 1200);
     public static User user3 = new User(2, "Bill", "Obama", 1200, 1400);
