@@ -19,4 +19,24 @@ public  class User {
         this.city = city;
         this.balance = balance;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
 }
