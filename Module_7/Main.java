@@ -39,9 +39,9 @@ public class Main {
     User user4 = new User(4, "FirstName4", "LastName1", "City4", 2300);
     User user5 = new User(5, "FirstName5", "LastName4", "City5", 3200);
     User user6 = new User(6, "FirstName6", "LastName2", "City3", 1050);
-    User user7 = new User(7, "FirstName7", "LastName1", "City2", 800);
+    User user7 = new User(7, "FirstName7", "Petrov", "City2", 800);
     User user8 = new User(8, "FirstName8", "LastName5", "City6", 5600);
-    User user9 = new User(9, "FirstName9", "LastName6", "City7", 2300);
+    User user9 = new User(9, "FirstName9", "Petrov", "City7", 2300);
     User user10 = new User(10, "FirstName10", "LastName5", "City8", 3200);
 
     Order order1 = new Order(1, BigDecimal.valueOf(32), Currency.USD, "itemName1", "shopIdentificator1", user1);
@@ -80,6 +80,33 @@ public class Main {
         for (int i = 0; i < orders.size(); i++) {
             System.out.println("ID "+orders.get(i).getId() + " | Price " + orders.get(i).getPrice()+" " + orders.get(i).getCurrency()+" | User City: "+orders.get(i).getUser().getCity()+" | ItemName: "+orders.get(i).getItemName());
         }
+
+        ///////////////////////////////// TreeSet /////////////////////////////////////////////////////////////
+
+        Set<Order> treeSetOrders = new TreeSet<>();
+
+        treeSetOrders.add(order1);
+        /*
+        treeSetOrders.add(order2);
+        treeSetOrders.add(order3);
+        treeSetOrders.add(order4);
+        treeSetOrders.add(order5);
+        treeSetOrders.add(order6);
+        treeSetOrders.add(order7);
+        treeSetOrders.add(order8);
+        treeSetOrders.add(order9);
+        treeSetOrders.add(order10);
+
+
+        Iterator<Order> iterator = treeSetOrders.iterator();
+        System.out.println("\nIf User LastName Petrov");
+        for (int i = 0; i < treeSetOrders.size(); i++) {
+            Order treeSet = iterator.next();
+            if (treeSet.getUser().getLastName().equals("Petrov")) {
+                System.out.println("ID "+treeSet.getId()+" | ItemName: "+ treeSet.getItemName()+" | User LastName: "+ treeSet.getUser().getLastName());
+            }
+        }
+        */
 
     }
 
