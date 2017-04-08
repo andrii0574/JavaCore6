@@ -129,9 +129,26 @@ public class Main {
 
         }
 
-        /*
+        Iterator<Order> iterator3 = treeSetOrders.iterator();
+        System.out.println("\nOrders Only With EUR Currency:");
+        while (iterator3.hasNext()) {
+            Order treeSet = iterator3.next();
+            if (treeSet.getCurrency().equals(Currency.USD)) {
+                iterator3.remove();
+            }
 
-        */
+            if (treeSet.getCurrency().equals(Currency.EUR)) {
+                System.out.println("ID "+treeSet.getId()+" | ItemName: "+ treeSet.getItemName()+" | Price: "+ treeSet.getPrice()+" "+ treeSet.getCurrency()+" | User LastName: "+ treeSet.getUser().getLastName());
+
+            }
+
+        }
+
+        /**/
+
+
+
+
 
 
 
