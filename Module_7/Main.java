@@ -144,7 +144,98 @@ public class Main {
 
         }
 
-        /**/
+        /*
+        Сгенерируйте Integer и String ArrayList и LinkedList с 1000 и 10000 элементами.
+
+        Измерьте время выполнения этих методов и выведите их в консоль:
+
+        - add
+        - set
+        - get
+        - remove
+        */
+
+        long startIntArListTime = System.nanoTime();
+        List<Integer> integersList = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            integersList.add(i);
+        }
+        long finishIntArListTime = System.nanoTime();
+        long IntArListTime = finishIntArListTime - startIntArListTime;
+        System.out.println("\nTime of building Integer ArrayList with 1000 Items: " + String.format("%,12d", IntArListTime) + " ns");
+        /////////////////////////////////////////
+        startIntArListTime = System.nanoTime();
+        List<Integer> integersList2 = new ArrayList<>();
+        for (int i = 0; i < 10000; i++) {
+            integersList2.add(i);
+        }
+        finishIntArListTime = System.nanoTime();
+        IntArListTime = finishIntArListTime - startIntArListTime;
+        System.out.println("\nTime of building Integer ArrayList with 10000 Items: " + String.format("%,12d", IntArListTime) + " ns");
+
+        //-------------------------------------------------------------------------------------------------------------------------------
+
+        long startStrArListTime = System.nanoTime();
+        List<String> stringList = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            stringList.add("String i");
+        }
+        long finishStrArListTime = System.nanoTime();
+        long strArListTime = finishStrArListTime - startStrArListTime;
+        System.out.println("\nTime of building String ArrayList with 1000 Items: " + String.format("%,12d", strArListTime) + " ns");
+        /////////////////////////////////////////
+        startStrArListTime = System.nanoTime();
+        List<String> stringList2 = new ArrayList<>();
+        for (int i = 0; i < 10000; i++) {
+            stringList2.add("String i");
+        }
+        finishStrArListTime = System.nanoTime();
+        strArListTime = finishStrArListTime - startStrArListTime;
+        System.out.println("\nTime of building String ArrayList with 10000 Items: " + String.format("%,12d", strArListTime) + " ns");
+
+        //-------------------------------------------------------------------------------------------------------------------------------
+
+        long startIntArLListTime = System.nanoTime();
+        List<Integer> integersLList = new LinkedList<>();
+        for (int i = 0; i < 1000; i++) {
+            integersLList.add(i);
+        }
+        long finishIntArLListTime = System.nanoTime();
+        long IntArLListTime = finishIntArLListTime - startIntArLListTime;
+        System.out.println("\nTime of building Integer LinkedList with 1000 Items: " + String.format("%,12d", IntArLListTime) + " ns");
+        /////////////////////////////////////////
+        startIntArLListTime = System.nanoTime();
+        List<Integer> integersLList2 = new ArrayList<>();
+        for (int i = 0; i < 10000; i++) {
+            integersLList2.add(i);
+        }
+        finishIntArLListTime = System.nanoTime();
+        IntArLListTime = finishIntArLListTime - startIntArLListTime;
+        System.out.println("\nTime of building Integer LinkedList with 10000 Items: " + String.format("%,12d", IntArLListTime) + " ns");
+
+        //-------------------------------------------------------------------------------------------------------------------------------
+
+        long startStrArLListTime = System.nanoTime();
+        List<String> stringLList = new LinkedList<>();
+        for (int i = 0; i < 1000; i++) {
+            stringLList.add("String i");
+        }
+        long finishStrArLListTime = System.nanoTime();
+        long strArLListTime = finishStrArLListTime - startStrArLListTime;
+        System.out.println("\nTime of building String LinkedList with 1000 Items: " + String.format("%,12d", strArLListTime) + " ns");
+        /////////////////////////////////////////
+        startStrArLListTime = System.nanoTime();
+        List<String> stringLList2 = new ArrayList<>();
+        for (int i = 0; i < 10000; i++) {
+            stringLList2.add("String i");
+        }
+        finishStrArLListTime = System.nanoTime();
+        strArLListTime = finishStrArLListTime - startStrArLListTime;
+        System.out.println("\nTime of building String LinkedList with 10000 Items: " + String.format("%,12d", strArLListTime) + " ns");
+
+        /*
+
+        */
 
 
 
