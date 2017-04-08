@@ -117,21 +117,21 @@ public class Main {
 
         Iterator<Order> iterator2 = treeSetOrders.iterator();
         System.out.println("\nOrder with MAX price:");
-        //List<Order> ordersWithMaxPrice = new ArrayList<>();
         BigDecimal maxPrice = null;
-
         for (int i = 0; i < treeSetOrders.size(); i++) {
             Order treeSet = iterator2.next();
-
             if (maxPrice == null){
                 maxPrice = treeSet.getPrice();
             }
             if (treeSet.getPrice().compareTo(maxPrice) == 1 || treeSet.getPrice().compareTo(maxPrice) == 0){
                 System.out.println("ID "+treeSet.getId()+" | ItemName: "+ treeSet.getItemName()+" | Price: "+ treeSet.getPrice()+" "+ treeSet.getCurrency()+" | User LastName: "+ treeSet.getUser().getLastName());
             }
-            /**/
+
         }
 
+        /*
+
+        */
 
 
 
