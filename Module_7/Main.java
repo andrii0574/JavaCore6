@@ -144,16 +144,6 @@ public class Main {
 
         }
 
-        /*
-        Сгенерируйте Integer и String ArrayList и LinkedList с 1000 и 10000 элементами.
-
-        Измерьте время выполнения этих методов и выведите их в консоль:
-
-        - add
-        - set
-        - get
-        - remove
-        */
 
         long startIntArListTime = System.nanoTime();
         List<Integer> integersList = new ArrayList<>();
