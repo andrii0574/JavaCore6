@@ -83,10 +83,18 @@ public class Main {
 
         ///////////////////////////////// TreeSet /////////////////////////////////////////////////////////////
 
-        Set<Order> treeSetOrders = new TreeSet<>();
+        Set<Order> treeSetOrders = new TreeSet<>(new Comparator<Order>() {
+            @Override
+            public int compare(Order o1, Order o2) {
+                int res = o1.getPrice().compareTo(o2.getPrice());
+                if (res != 0) {
+                    return -res;
+                }
+                return o1.getPrice().compareTo(o2.getPrice());
+            }
+        });
 
         treeSetOrders.add(order1);
-        /*
         treeSetOrders.add(order2);
         treeSetOrders.add(order3);
         treeSetOrders.add(order4);
@@ -106,6 +114,8 @@ public class Main {
                 System.out.println("ID "+treeSet.getId()+" | ItemName: "+ treeSet.getItemName()+" | User LastName: "+ treeSet.getUser().getLastName());
             }
         }
+        /*
+
         */
 
     }
